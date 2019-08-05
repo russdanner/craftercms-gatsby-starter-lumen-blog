@@ -49,7 +49,7 @@ public class GatsbyContentServices {
               
           cmsComponent = getContentPage(siteItem.getDom())
           cmsComponent.localId = item.localId
-          components.add(Component)
+          components.add(cmsComponent)
       }
 
 		return components
