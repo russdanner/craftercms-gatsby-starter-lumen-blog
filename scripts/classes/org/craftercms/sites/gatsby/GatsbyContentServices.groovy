@@ -17,10 +17,7 @@ public class GatsbyContentServices {
 	def getPages() {
 
       def queryStatement = "content-type:\\/page*" 
-      
-      def queryStr = "${contentTypeQuery} AND ${searchField}:*${term}*"
       def result = elasticsearch.search([ query: [ query_string: [ query: queryStatement as String ] ] ])
-
       def items = result.hits.hits*.getSourceAsMap()
       def pages = []
       
@@ -41,33 +38,10 @@ public class GatsbyContentServices {
 	}	
 
 
-/**
+    /**
      */
   def getComponents() {
-
-      def queryStatement = "content-type:\\/component*" 
-      
-      def query = searchService.createQuery()
-      query.setQuery(queryStatement)
-      
-      def executedQuery = searchService.search(query)
-      def itemsFound = executedQuery.response.numFound
-      def items = executedQuery.response.documents
-      def pages = []
-      
-      items.each { item ->
-          def cmsPage = [:]
-          def siteItem = siteItemService.getSiteItem(item.localId)
-              
-          cmsPage = getContentComponent(siteItem.getDom())
-          cmsPage.localId = item.localId
-          cmsPage.url = item.localId
-          
-          pages.add(cmsPage)
-      }
-
-    return pages
-
+    return []
   } 
 
   /* turn a dom object in to a content map */
