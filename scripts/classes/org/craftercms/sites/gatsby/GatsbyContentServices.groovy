@@ -47,7 +47,7 @@ public class GatsbyContentServices {
           def cmsComponent = [:]
           def siteItem = siteItemService.getSiteItem(item.localId)
               
-          cmsComponent = getContentPage(siteItem.getDom())
+          cmsComponent = getContentComponent(siteItem.getDom())
           cmsComponent.localId = item.localId
           components.add(cmsComponent)
       }
