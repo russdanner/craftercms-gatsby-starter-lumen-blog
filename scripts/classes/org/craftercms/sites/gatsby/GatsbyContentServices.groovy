@@ -1,13 +1,4 @@
-package org.craftercms.gatsby
-
-
-import org.apache.commons.lang3.StringUtils
-import org.craftercms.engine.service.UrlTransformationService
-import org.elasticsearch.action.search.SearchRequest
-import org.elasticsearch.index.query.QueryBuilders
-import org.elasticsearch.search.builder.SearchSourceBuilder
-import org.elasticsearch.search.sort.FieldSortBuilder
-import org.elasticsearch.search.sort.SortOrder
+package org.craftercms.sites.gatsby
 
 public class GatsbyContentServices {
 
@@ -26,7 +17,10 @@ public class GatsbyContentServices {
 	def getPages() {
 
       def queryStatement = "content-type:\\/page*" 
-      def result = elasticsearch.search([ query: [ query_string: [ query: queryStatement as String  ]  ]  ])
+      
+      def queryStr = "${contentTypeQuery} AND ${searchField}:*${term}*"
+      def result = elasticsearch.search([ query: [ query_string: [ query: queryStatement as String ] ] ])
+
       def items = result.hits.hits*.getSourceAsMap()
       def pages = []
       
@@ -42,14 +36,38 @@ public class GatsbyContentServices {
           pages.add(cmsPage)
       }
 
-        return pages
+		return pages
+
 	}	
 
-  /**
-   */
+
+/**
+     */
   def getComponents() {
 
-    return []
+      def queryStatement = "content-type:\\/component*" 
+      
+      def query = searchService.createQuery()
+      query.setQuery(queryStatement)
+      
+      def executedQuery = searchService.search(query)
+      def itemsFound = executedQuery.response.numFound
+      def items = executedQuery.response.documents
+      def pages = []
+      
+      items.each { item ->
+          def cmsPage = [:]
+          def siteItem = siteItemService.getSiteItem(item.localId)
+              
+          cmsPage = getContentComponent(siteItem.getDom())
+          cmsPage.localId = item.localId
+          cmsPage.url = item.localId
+          
+          pages.add(cmsPage)
+      }
+
+    return pages
+
   } 
 
   /* turn a dom object in to a content map */
@@ -90,11 +108,18 @@ public class GatsbyContentServices {
                         // component
                         def componentPath = include[0].getText();
                         content[property.getName()].add(componentPath)
+
+                        // code that unfurls components
+                        //def compomentItem = siteItemService.getSiteItem(componentPath)
+                        //content[property.getName()].add(getElementContent(compomentItem.dom.component))
+
+                        
                       }
                   }
                   else {
                       content[property.getName()] = getElementContent(property)
                   }
+
           }
       }
       
