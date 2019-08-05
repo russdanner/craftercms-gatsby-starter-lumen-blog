@@ -10,14 +10,12 @@ public class GatsbyContentServices {
     def getSearchService() { return searchService }
     def setSearchService(value) { searchService = value }
 
-
-
 	/**
      */
 	def getPages() {
 
       def queryStatement = "content-type:\\/page*" 
-      def result = elasticsearch.search([ query: [ query_string: [ query: queryStatement as String ] ] ])
+      def result = searchService.search([ query: [ query_string: [ query: queryStatement as String ] ] ])
       def items = result.hits.hits*.getSourceAsMap()
       def pages = []
       
