@@ -32,14 +32,27 @@ public class GatsbyContentServices {
       }
 
 		return pages
-
 	}	
 
 
     /**
      */
   def getComponents() {
-    return []
+      def queryStatement = "content-type:\\/component*" 
+      def result = searchService.search([ query: [ query_string: [ query: queryStatement as String ] ] ])
+      def items = result.hits.hits*.getSourceAsMap()
+      def components = []
+      
+      items.each { item ->
+          def cmsComponent = [:]
+          def siteItem = siteItemService.getSiteItem(item.localId)
+              
+          cmsComponent = getContentPage(siteItem.getDom())
+          cmsComponent.localId = item.localId
+          components.add(Component)
+      }
+
+		return components
   } 
 
   /* turn a dom object in to a content map */
