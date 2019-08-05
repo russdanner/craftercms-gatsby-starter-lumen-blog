@@ -25,4 +25,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="gatsbyContentServices" class="org.craftercms.sites.gatsby.GatsbyContentServices">
+        <property name="siteItemService" ref="crafter.siteItemService"/>
+        <property name="searchService" ref="crafter.elasticsearchService"/>
+    </bean>
 </beans>
