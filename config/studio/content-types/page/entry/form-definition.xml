@@ -417,13 +417,6 @@
 				</field>
 			</fields>
 		</section>
-		<section>
-			<title>Main Content</title>
-			<description></description>
-			<defaultOpen>true</defaultOpen>
-			<fields>
-			</fields>
-		</section>
 	</sections>
 	<datasources>				<datasource>
 					<type>img-desktop-upload</type>
