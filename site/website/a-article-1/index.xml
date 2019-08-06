@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/entry</content-type>	<display-template>/templates/web/entry.ftl</display-template>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>317d</objectGroupId>
+	<objectId>317da63e-0626-44e5-8d7f-4333822df24f</objectId>
+	<description_t>A</description_t>
+	<file-name>index.xml</file-name>
+	<folder-name>a-article-1</folder-name>
+	<internal-name>A article</internal-name>
+	<slug_s>A Article number 1</slug_s>
+	<categorySlug_s>Acat slug</categorySlug_s>
+	<title_t>A title for my article</title_t>
+	<category_s>Cats</category_s>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<disabled>false</disabled>
+	<body_html>&lt;p&gt;BODY CONTENT&lt;/p&gt;</body_html>
+	<createdDate>2019-08-06T18:16:39.439Z</createdDate>
+	<createdDate_dt>2019-08-06T18:16:39.439Z</createdDate_dt>
+	<lastModifiedDate>2019-08-06T18:16:39.439Z</lastModifiedDate>
+	<lastModifiedDate_dt>2019-08-06T18:16:39.439Z</lastModifiedDate_dt>
+</page>
