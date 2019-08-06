@@ -68,31 +68,36 @@ public class GatsbyContentServices {
   def getElementContent(element) {
   
       def content = [:]
+            content.edges = [:]
+            content.edges.node = [:]
+            content.edges.node.fields = [:]
+            contentF = content.edges.node.fields
+            
       
       element.elements().each { property ->
       
           if(property.isTextOnly()) {
               // element is a property
-              content[property.getName()] = property.getText()
+              contentF[property.getName()] = property.getText()
           }
           else {
              
                   // item is a repeat group (recursive)
                   if("item".equals(property.getName())) {
-                      if(!content[property.getName()]) {
+                      if(!contentF[property.getName()]) {
                           // init the array
-                          content[property.getName()] = []
+                          contentF[property.getName()] = []
                       }
                       
                       def include = property.selectNodes("./include");
                       if(include.size() == 0) {
                         // repeat group
-                        content[property.getName()].add(getElementContent(property))
+                        contentF[property.getName()].add(getElementContent(property))
                       }
                       else {
                         // component
                         def componentPath = include[0].getText();
-                        content[property.getName()].add(componentPath)
+                        contentF[property.getName()].add(componentPath)
 
                         // code that unfurls components
                         //def compomentItem = siteItemService.getSiteItem(componentPath)
@@ -102,7 +107,7 @@ public class GatsbyContentServices {
                       }
                   }
                   else {
-                      content[property.getName()] = getElementContent(property)
+                      contentF[property.getName()] = getElementContent(property)
                   }
 
           }
