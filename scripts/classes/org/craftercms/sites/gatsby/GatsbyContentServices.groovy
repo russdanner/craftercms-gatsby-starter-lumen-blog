@@ -71,8 +71,8 @@ public class GatsbyContentServices {
             content.edges = [:]
             content.edges.node = [:]
             //content.edges.node.fields = [:]
-            content.fields = [:]
-            def contentF = content.fields
+            content.fieldsX = [:]
+            def contentF = content.fieldsX
             
       
       element.elements().each { property ->
