@@ -6,8 +6,8 @@
 	<file-extension>xml</file-extension>
 	<content-as-folder>true</content-as-folder>
 	<previewable>true</previewable>
-	<quickCreate>false</quickCreate>
-	<quickCreatePath></quickCreatePath>
+	<quickCreate>true</quickCreate>
+	<quickCreatePath>/site/website/posts/</quickCreatePath>
 	<noThumbnail>true</noThumbnail>
 	<image-thumbnail></image-thumbnail>
 </content-type>
