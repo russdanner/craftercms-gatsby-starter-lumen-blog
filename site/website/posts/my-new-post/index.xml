@@ -10,16 +10,16 @@
 	<internal-name>My new Post title</internal-name>
 	<slug_s>My new Post title</slug_s>
 	<categorySlug_s>My new Post title</categorySlug_s>
-	<title_t>My new Post title</title_t>
+	<title_t>My new Post title ANOTHER UPDATE</title_t>
 	<category_s>cats</category_s>
 	<placeInNav>false</placeInNav>
 	<orderDefault_f>-1</orderDefault_f>
 	<disabled>false</disabled>
 	<description_t>My new Post desciption</description_t>
 	<body_html>&lt;p&gt;My new Post &lt;strong&gt;body&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&lt;/p&gt;</body_html>
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;</body_html>
 	<createdDate>2019-08-06T18:56:37.746Z</createdDate>
 	<createdDate_dt>2019-08-06T18:56:37.746Z</createdDate_dt>
-	<lastModifiedDate>2019-08-07T13:03:59.277Z</lastModifiedDate>
-	<lastModifiedDate_dt>2019-08-07T13:03:59.277Z</lastModifiedDate_dt>
+	<lastModifiedDate>2019-08-07T13:07:17.033Z</lastModifiedDate>
+	<lastModifiedDate_dt>2019-08-07T13:07:17.033Z</lastModifiedDate_dt>
 </page>
