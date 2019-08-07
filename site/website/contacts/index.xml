@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/page</content-type>	<display-template/>
+	<no-template-required>true</no-template-required>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>400d</objectGroupId>
+	<objectId>400dd084-339f-791d-258e-02aebc96d8c9</objectId>
+	<file-name>index.xml</file-name>
+	<folder-name>contacts</folder-name>
+	<internal-name>Contacts</internal-name>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<createdDate>2019-08-07T01:51:59.929Z</createdDate>
+	<createdDate_dt>2019-08-07T01:51:59.929Z</createdDate_dt>
+	<lastModifiedDate>2019-08-07T01:51:59.929Z</lastModifiedDate>
+	<lastModifiedDate_dt>2019-08-07T01:51:59.929Z</lastModifiedDate_dt>
+</page>
