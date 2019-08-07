@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page>
+	<content-type>/page/post</content-type>	<display-template/>
+	<no-template-required/>
+	<merge-strategy>inherit-levels</merge-strategy>
+	<objectGroupId>38d3</objectGroupId>
+	<objectId>38d3225c-4468-956c-6f6d-47082a28b504</objectId>
+	<description_t>test</description_t>
+	<file-name>index.xml</file-name>
+	<folder-name>tes</folder-name>
+	<internal-name>test</internal-name>
+	<slug_s>test</slug_s>
+	<categorySlug_s>test</categorySlug_s>
+	<title_t>test</title_t>
+	<category_s>test</category_s>
+	<placeInNav>false</placeInNav>
+	<orderDefault_f>-1</orderDefault_f>
+	<disabled>false</disabled>
+	<body_html>&lt;p&gt;test&lt;/p&gt;</body_html>
+	<createdDate>2019-08-07T04:12:30.844Z</createdDate>
+	<createdDate_dt>2019-08-07T04:12:30.844Z</createdDate_dt>
+	<lastModifiedDate>2019-08-07T04:12:30.844Z</lastModifiedDate>
+	<lastModifiedDate_dt>2019-08-07T04:12:30.844Z</lastModifiedDate_dt>
+</page>
