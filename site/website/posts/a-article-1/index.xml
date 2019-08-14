@@ -5,7 +5,7 @@
 	<merge-strategy>inherit-levels</merge-strategy>
 	<objectGroupId>317d</objectGroupId>
 	<objectId>317da63e-0626-44e5-8d7f-4333822df24f</objectId>
-	<description_t>A</description_t>
+	<description_t>Blog post description</description_t>
 	<file-name>index.xml</file-name>
 	<folder-name>a-article-1</folder-name>
 	<internal-name>Blog title 1</internal-name>
@@ -19,6 +19,6 @@
 	<body_html>&lt;p&gt;BODY CONTENT&lt;/p&gt;</body_html>
 	<createdDate>2019-08-06T18:16:39.439Z</createdDate>
 	<createdDate_dt>2019-08-06T18:16:39.439Z</createdDate_dt>
-	<lastModifiedDate>2019-08-14T13:39:13.381Z</lastModifiedDate>
-	<lastModifiedDate_dt>2019-08-14T13:39:13.381Z</lastModifiedDate_dt>
+	<lastModifiedDate>2019-08-14T13:41:18.923Z</lastModifiedDate>
+	<lastModifiedDate_dt>2019-08-14T13:41:18.923Z</lastModifiedDate_dt>
 </page>
